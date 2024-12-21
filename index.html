@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diet Calculator</title>
+        <link rel="stylesheet" href="utils.css">
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="p-lg flex flex-col items-center">
+            <div class="mb-md">
+                <h1 class="text-4xl text-center">Advance Diet Calculator</h1>
+                <p class="text-md text-justify">
+                    This is a calculator that calculate a lot of indicator for diet planning. It uses BMR, TDEE, BMI, etc.
+                </p>
+            </div>
+            <div class="w-half">
+                <div class="mb-md">
+                    <label for="age" class="text-xs">Sex</label>
+                    <select name="sex" id="sex-input" class="w-full h-2 border border-black rounded-md">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-md">
+                    <label for="age" class="text-xs">Activity Factor</label>
+                    <select name="activity-factor" id="activity-factor-input" class="w-full h-2 border border-black rounded-md">
+                        <option value="sedentary">Sedentary - Minimal physical activity, mostly sitting</option>
+                        <option value="lightly_active">Lightly active - Light exercise or activity 1-3 days a week</option>
+                        <option value="moderately_active">Moderately active - Moderate exercise or activity 3-5 days a week</option>
+                        <option value="very_active">Very active - Intense exercise or activity 6-7 days a week</option>
+                        <option value="extra_active">Extra active - Highly demanding physical work or intense training</option>
+                    </select>
+                </div>
+                <div class="mb-md">
+                    <label for="age-input" class="text-xs">Age (years)</label>
+                    <input type="number" name="age" id="age-input" class="w-full h-2 pl-sm border border-black rounded-md">
+                </div>
+                <div class="mb-md">
+                    <label for="height-input" class="text-xs">Height (cm)</label>
+                    <input type="number" name="height" id="height-input" class="w-full h-2 pl-sm border border-black rounded-md">
+                </div>
+                <div class="mb-md">
+                    <label for="weight-input" class="text-xs">Weight (kg)</label>
+                    <input type="number" name="weight" id="weight-input" class="w-full h-2 pl-sm border border-black rounded-md">
+                </div>
+                <div class="mb-md">
+                    <label for="target-weight-input" class="text-xs">Target Weight (kg)</label>
+                    <input type="number" name="target-weight" id="target-weight-input" class="w-full h-2 pl-sm border border-black rounded-md">
+                </div>
+                <div class="mb-md">
+                    <label for="target-calorie-deficit-input" class="text-xs">Target Calorie Deficit (kcal/day)</label>
+                    <input type="number" name="target-calorie-deficit" id="target-calorie-deficit-input" class="w-full h-2 pl-sm border border-black rounded-md" value="500">
+                    <p class="text-xs" style="color: red">* It's recommended to reduce your calorie intake at maximum 500 kcal/day.</p>
+                </div>
+                <div class="mb-md">
+                    <button id="calculate-button" class="pl-lg pr-lg pt-md pb-md border rounded-md text-black bg-lightgray">Calculate</button>
+                </div>
+            </div>
+            <div class="mb-md">
+                <h1 class="text-4xl text-center">Summary</h1>
+                <p class="text-md text-justify" id="summary"></p>
+            </div>
+        </div>
+    </body>
+</html>
